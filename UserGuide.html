@@ -73,7 +73,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <p><strong><code>list candidates</code></strong> : lists the names of all the candidates available</p>
 </li>
 <li>
-<p><strong><code>add candidate</code></strong> : adds a candidate to RecruitBook</p>
+<p><strong><code>addc</code></strong> : add a job candidate to RecruitBook</p>
 </li>
 <li>
 <p><strong><code>add job</code></strong> : adds an available job to RecruitBook</p>
@@ -132,7 +132,7 @@ Format: <code>help</code></p>
 <div class="sect3">
 <h4 id="adds-a-candidate-to-the-recruitbook"><a class="link" href="#adds-a-candidate-to-the-recruitbook">3.2.1. Adds a candidate to the RecruitBook</a></h4>
 <div class="paragraph">
-<p>Format: <code>add candidate</code><br>
+<p>Format: <code>addc</code><br>
 Supported tags: <code>n/</code>, <code>p/</code>, <code>e/</code>, <code>a/</code>, <code>g/</code>, <code>x/</code>, <code>j/</code>, <code>h/</code>, <code>s/</code>, <code>y/</code>, <code>c/</code></p>
 </div>
 <div class="paragraph">
@@ -175,7 +175,7 @@ Supported tags: <code>n/</code>, <code>p/</code>, <code>e/</code>, <code>a/</cod
 <div class="sect3">
 <h4 id="adds-a-job-offer-to-the-recruitbook"><a class="link" href="#adds-a-job-offer-to-the-recruitbook">3.2.2. Adds a job offer to the RecruitBook</a></h4>
 <div class="paragraph">
-<p>Format: <code>add job</code></p>
+<p>Format: <code>addj</code></p>
 </div>
 <div class="paragraph">
 <p>Entering this command will prompt user the following:<br>
@@ -346,15 +346,15 @@ Supported tags: <code>n/NAME</code>, <code>p/PHONE</code>, <code>e/EMAIL</code>,
 <ul>
 <li>
 <p><code>find n/john</code><br>
-(Returns any person having the name John)</p>
+(Returns any candidate having the name John)</p>
 </li>
 <li>
 <p><code>find p/98</code><br>
-(Returns any person having phone number with 98 inside)</p>
+(Returns any candidate having phone number with 98 inside)</p>
 </li>
 <li>
 <p><code>find e/helloworld@example.com</code><br>
-(Returns any persons having email <a href="mailto:helloworld@example.com">helloworld@example.com</a>)</p>
+(Returns any candidates having email <a href="mailto:helloworld@example.com">helloworld@example.com</a>)</p>
 </li>
 </ul>
 </div>
@@ -404,17 +404,17 @@ Supported tags: <code>h/</code>, <code>j/</code>, <code>s/</code>, <code>x/</cod
 <div class="sect2">
 <h3 id="deleting-a-candidate-job-code-delete-code"><a class="link" href="#deleting-a-candidate-job-code-delete-code">3.7. Deleting a candidate / job : <code>delete</code></a></h3>
 <div class="sect3">
-<h4 id="deleting-a-specific-person"><a class="link" href="#deleting-a-specific-person">3.7.1. Deleting a specific person</a></h4>
+<h4 id="deleting-a-specific-candidate"><a class="link" href="#deleting-a-specific-candidate">3.7.1. Deleting a specific candidate</a></h4>
 <div class="paragraph">
 <p>Format: <code>delete &lt;NAME&gt;</code></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Deletes the person with the specified <code>NAME</code></p>
+<p>Deletes the candidate with the specified <code>NAME</code></p>
 </li>
 <li>
-<p>NAME <strong>must be the full name</strong> of the person that is saved in the RecruitBook <code>e.g. John Doe</code></p>
+<p>NAME <strong>must be the full name</strong> of the candidate that is saved in the RecruitBook <code>e.g. John Doe</code></p>
 </li>
 <li>
 <p>The full name can be found using the find function when a partial keyword is entered</p>
@@ -539,4 +539,4 @@ e.g. <code>delete James Lee</code>, <code>delete 5</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-21 03:33:11 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-01 12:12:11 UTC</div></div></div></body></html>
