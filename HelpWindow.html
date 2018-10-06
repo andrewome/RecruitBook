@@ -16,7 +16,7 @@
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
 <li><a href="#adding-a-candidate-job-code-add-code">3.2. Adding a candidate / job : <code>add</code></a></li>
 <li><a href="#listing-all-code-list-code">3.3. Listing all : <code>list</code></a></li>
-<li><a href="#editing-a-candidate-job-code-edit-code">3.4. Editing a candidate / job : <code>edit</code></a></li>
+<li><a href="#editing-a-candidate-job-code-editc-code">3.4. Editing a candidate / job : <code>editc</code></a></li>
 <li><a href="#locating-candidates-by-search-parameter-code-find-code">3.5. Locating candidates by search parameter : <code>find</code></a></li>
 <li><a href="#filtering-by-a-specific-tag-code-filter-code">3.6. Filtering by a specific tag : <code>filter</code></a></li>
 <li><a href="#deleting-a-candidate-job-code-delete-code">3.7. Deleting a candidate / job : <code>delete</code></a></li>
@@ -188,7 +188,7 @@ Supported tags: <code>n/</code>, <code>p/</code>, <code>e/</code>, <code>a/</cod
 <div class="ulist">
 <ul>
 <li>
-<p><code>c/Macdonalds j/Store Manager</code></p>
+<p><code>c/Mcdonalds j/Store Manager</code></p>
 </li>
 <li>
 <p><code>c/KFC j/Cashier</code></p>
@@ -269,14 +269,15 @@ Supported tags: <code>n/</code>, <code>p/</code>, <code>e/</code>, <code>a/</cod
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-candidate-job-code-edit-code"><a class="link" href="#editing-a-candidate-job-code-edit-code">3.4. Editing a candidate / job : <code>edit</code></a></h3>
+<h3 id="editing-a-candidate-job-code-editc-code"><a class="link" href="#editing-a-candidate-job-code-editc-code">3.4. Editing a candidate / job : <code>editc</code></a></h3>
 <div class="sect3">
-<h4 id="edits-attributes-of-the-candidate-at-the-specified-key-code-name-code"><a class="link" href="#edits-attributes-of-the-candidate-at-the-specified-key-code-name-code">3.4.1. Edits attributes of the candidate at the specified key <code>&lt;NAME&gt;</code></a></h4>
+<h4 id="edits-attributes-of-the-candidate-at-the-specified-index-code-index-code"><a class="link" href="#edits-attributes-of-the-candidate-at-the-specified-index-code-index-code">3.4.1. Edits attributes of the candidate at the specified index <code>&lt;INDEX&gt;</code></a></h4>
 <div class="paragraph">
-<p>Format: <code>edit &lt;NAME&gt;</code></p>
+<p>Format: <code>editc &lt;INDEX&gt;</code></p>
 </div>
 <div class="paragraph">
-<p><code>&lt;NAME&gt;</code> must be the <strong>full name</strong> that was inserted using the <code>add</code> command</p>
+<p>Edits the candidate with the specified <code>INDEX</code>.
+The index must be an index number shown in the displayed candidates list.</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -284,12 +285,12 @@ Supported tags: <code>n/</code>, <code>p/</code>, <code>e/</code>, <code>a/</cod
 <div class="ulist">
 <ul>
 <li>
-<p><code>edit John Doe p/91234567 e/johndoe@example.com</code><br>
-(Edits the phone number and email address of John Doe to be 91234567 and <a href="mailto:johndoe@example.com">johndoe@example.com</a> respectively)</p>
+<p><code>editc 1 n/John Doe p/91234567 e/johndoe@example.com</code><br>
+(Edits the name, phone number and email address of the candidate with index 1 to be John Doe, 91234567 and <a href="mailto:johndoe@example.com">johndoe@example.com</a> respectively)</p>
 </li>
 <li>
-<p><code>edit Betsy Crower t/</code><br>
-(Edits and clears all existing tags belonging to Betsy Crower)</p>
+<p><code>editc 3 t/</code><br>
+(Edits and clears all existing tags belonging to the candidate at index 3)</p>
 </li>
 </ul>
 </div>
@@ -297,7 +298,11 @@ Supported tags: <code>n/</code>, <code>p/</code>, <code>e/</code>, <code>a/</cod
 <div class="sect3">
 <h4 id="edits-details-of-a-job-offer"><a class="link" href="#edits-details-of-a-job-offer">3.4.2. Edits details of a job offer</a></h4>
 <div class="paragraph">
-<p>Format: <code>edit &lt;INDEX&gt;</code></p>
+<p>Format: <code>editj &lt;INDEX&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Edits the job with the specified <code>INDEX</code>.
+The index must be an index number shown in the displayed job list.</p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -305,8 +310,8 @@ Supported tags: <code>n/</code>, <code>p/</code>, <code>e/</code>, <code>a/</cod
 <div class="ulist">
 <ul>
 <li>
-<p><code>edit 1 x/20-30</code>
-(Edits the MIN_AGE-MAX_AGE attribute to be from 20 to 30 years of age for the first job offer)</p>
+<p><code>editj 1 x/20-30</code>
+(Edits the MIN_AGE-MAX_AGE attribute to be from 20 to 30 years of age for the 1st job offer)</p>
 </li>
 </ul>
 </div>
@@ -406,15 +411,15 @@ Supported tags: <code>h/</code>, <code>j/</code>, <code>s/</code>, <code>x/</cod
 <div class="sect3">
 <h4 id="deleting-a-specific-candidate"><a class="link" href="#deleting-a-specific-candidate">3.7.1. Deleting a specific candidate</a></h4>
 <div class="paragraph">
-<p>Format: <code>delete &lt;NAME&gt;</code></p>
+<p>Format: <code>deletec &lt;INDEX&gt;</code></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Deletes the candidate with the specified <code>NAME</code></p>
+<p>Deletes the candidate with the specified <code>INDEX</code></p>
 </li>
 <li>
-<p>NAME <strong>must be the full name</strong> of the candidate that is saved in the RecruitBook <code>e.g. John Doe</code></p>
+<p>The index must be an index number shown in the displayed candidate list.</p>
 </li>
 <li>
 <p>The full name can be found using the find function when a partial keyword is entered</p>
@@ -429,14 +434,14 @@ Supported tags: <code>h/</code>, <code>j/</code>, <code>s/</code>, <code>x/</cod
 (Shows all saved candidates named Betsy)</p>
 </div>
 <div class="paragraph">
-<p>Step 2. <code>delete Betsy Rose</code><br>
-(Deletes ‘Betsy Rose’ from the RecruitBook)</p>
+<p>Step 2. <code>deletec 1</code><br>
+(Deletes the candidate with index 1 from the RecruitBook(based on most recent list))</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="deleting-a-specific-job-offer"><a class="link" href="#deleting-a-specific-job-offer">3.7.2. Deleting a specific job offer</a></h4>
 <div class="paragraph">
-<p>Format: <code>delete &lt;INDEX&gt;</code></p>
+<p>Format: <code>deletej &lt;INDEX&gt;</code></p>
 </div>
 <div class="ulist">
 <ul>
@@ -456,7 +461,7 @@ Supported tags: <code>h/</code>, <code>j/</code>, <code>s/</code>, <code>x/</cod
 (Shows all available jobs)</p>
 </div>
 <div class="paragraph">
-<p>Step 2. <code>delete 5</code><br>
+<p>Step 2. <code>deletej 5</code><br>
 (Deletes the 5th job in the job list)</p>
 </div>
 </div>
@@ -508,15 +513,15 @@ There is no need to save manually.</p>
 <p><strong>Help</strong> : <code>help</code></p>
 </li>
 <li>
-<p><strong>Add</strong> : <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS …</code><br>
-e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 …</code></p>
+<p><strong>Add</strong> : <code>addc n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS …</code><br>
+e.g. <code>addc n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 …</code></p>
 </li>
 <li>
 <p><strong>List</strong> : <code>list [jobs /candidates]</code></p>
 </li>
 <li>
-<p><strong>Edit</strong> : <code>edit &lt;NAME&gt; [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS]</code> or <code>edit &lt;INDEX&gt;</code><br>
-e.g. <code>edit James Lee e/jameslee@example.com</code>, <code>edit 5</code></p>
+<p><strong>Edit</strong> : <code>editc &lt;INDEX&gt; [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS]</code> or <code>edit &lt;INDEX&gt;</code><br>
+e.g. <code>editc 2 e/jameslee@example.com</code>, <code>editj 5</code></p>
 </li>
 <li>
 <p><strong>Find</strong> : <code>find &lt;tag&gt;/KEYWORD [MORE_KEYWORDS]</code><br>
@@ -527,8 +532,8 @@ e.g. <code>find n/James n/Jake</code></p>
 e.g. <code>filter h/O LEVEL</code></p>
 </li>
 <li>
-<p><strong>Delete</strong> : <code>delete &lt;NAME&gt;</code> or <code>delete &lt;INDEX&gt;</code><br>
-e.g. <code>delete James Lee</code>, <code>delete 5</code></p>
+<p><strong>Delete</strong> : <code>deletec &lt;INDEX&gt;</code> or <code>deletej &lt;INDEX&gt;</code><br>
+e.g. <code>deletec 1 `, `deletej 5</code></p>
 </li>
 <li>
 <p><strong>Clear</strong> : <code>clear</code></p>
@@ -539,4 +544,4 @@ e.g. <code>delete James Lee</code>, <code>delete 5</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-05 09:45:11 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-06 15:20:16 UTC</div></div></div></body></html>
