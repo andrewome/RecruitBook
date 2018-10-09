@@ -14,16 +14,17 @@
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#adding-a-candidate-job-code-add-code">3.2. Adding a candidate / job : <code>add</code></a></li>
-<li><a href="#listing-all-code-list-code">3.3. Listing all : <code>list</code></a></li>
-<li><a href="#editing-a-candidate-job-code-editc-code">3.4. Editing a candidate / job : <code>editc</code></a></li>
-<li><a href="#locating-candidates-by-search-parameter-code-find-code">3.5. Locating candidates by search parameter : <code>find</code></a></li>
-<li><a href="#filtering-by-a-specific-tag-code-filter-code">3.6. Filtering by a specific tag : <code>filter</code></a></li>
-<li><a href="#deleting-a-candidate-job-code-delete-code">3.7. Deleting a candidate / job : <code>delete</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.8. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.9. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.10. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.11. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#adding-a-candidate-company-job-code-add-code">3.2. Adding a candidate / company / job  : <code>add</code></a></li>
+<li><a href="#exits-from-any-intermediate-command">3.3. Exits from any intermediate command</a></li>
+<li><a href="#listing-all-code-list-code">3.4. Listing all : <code>list</code></a></li>
+<li><a href="#editing-a-candidate-job-code-editc-code">3.5. Editing a candidate / job : <code>editc</code></a></li>
+<li><a href="#locating-candidates-by-search-parameter-code-find-code">3.6. Locating candidates by search parameter : <code>find</code></a></li>
+<li><a href="#filtering-by-a-specific-tag-code-filter-code">3.7. Filtering by a specific tag : <code>filter</code></a></li>
+<li><a href="#deleting-a-candidate-job-code-delete-code">3.8. Deleting a candidate / job : <code>delete</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.9. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.10. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.11. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.12. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -76,7 +77,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <p><strong><code>addc</code></strong> : add a job candidate to RecruitBook</p>
 </li>
 <li>
-<p><strong><code>add job</code></strong> : adds an available job to RecruitBook</p>
+<p><strong><code>addj</code></strong> : adds an available job to RecruitBook</p>
 </li>
 <li>
 <p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd job shown in the current list</p>
@@ -105,16 +106,13 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
-<p>Words in <code>UPPER_CASE</code> are the parameters to be supplied by the user e.g. in <code>add n/NAME</code>, <code>NAME</code> is a parameter which can be used as <code>add n/John Doe</code>.</p>
+<p>Words in <code>UPPER_CASE</code> are the fields to be specified by you! e.g. in <code>add n/NAME</code>, <code>NAME</code> is a parameter which can be used as <code>add n/John Doe</code>.</p>
 </li>
 <li>
-<p>Details labelled with “if any” must be filled in at least with <code>NA</code> if user finds it not applicable.</p>
+<p>Details labelled with “if any” must be filled in at least with <code>NA</code> if you find it not applicable.</p>
 </li>
 <li>
 <p>Parameters can be in any order e.g. if the command specifies <code>n/NAME p/PHONE_NUMBER</code>, <code>p/PHONE_NUMBER n/NAME</code> is also acceptable.</p>
-</li>
-<li>
-<p>Gender can be specified by g/U (unrestricted), g/F (female) or g/M (male).</p>
 </li>
 </ul>
 </div>
@@ -128,7 +126,7 @@ Format: <code>help</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-candidate-job-code-add-code"><a class="link" href="#adding-a-candidate-job-code-add-code">3.2. Adding a candidate / job : <code>add</code></a></h3>
+<h3 id="adding-a-candidate-company-job-code-add-code"><a class="link" href="#adding-a-candidate-company-job-code-add-code">3.2. Adding a candidate / company / job  : <code>add</code></a></h3>
 <div class="sect3">
 <h4 id="adds-a-candidate-to-the-recruitbook"><a class="link" href="#adds-a-candidate-to-the-recruitbook">3.2.1. Adds a candidate to the RecruitBook</a></h4>
 <div class="paragraph">
@@ -136,7 +134,7 @@ Format: <code>help</code></p>
 Supported tags: <code>n/</code>, <code>p/</code>, <code>e/</code>, <code>a/</code>, <code>g/</code>, <code>x/</code>, <code>j/</code>, <code>h/</code>, <code>s/</code>, <code>y/</code>, <code>c/</code></p>
 </div>
 <div class="paragraph">
-<p>Entering this command will prompt user the following:<br>
+<p>Entering this command will prompt you the following:<br>
 <strong><code>Enter the following details of the candidate in the format:</code></strong><br>
 <code>n/NAME g/GENDER x/AGE p/PHONE_NUMBER e/EMAIL a/ADDRESS j/SEEKING_JOB h/HIGHEST_EDUCATION s/EXPECTED_SALARY_PER_MONTH</code></p>
 </div>
@@ -154,7 +152,7 @@ Supported tags: <code>n/</code>, <code>p/</code>, <code>e/</code>, <code>a/</cod
 </ul>
 </div>
 <div class="paragraph">
-<p>After keying in the details, user will be further prompted for details of job experience:<br>
+<p>After keying in the details, you will be further prompted for details of job experience:<br>
 <strong><code>Enter job experience (if any) of the candidate in the following format:</code></strong><br>
 <code>j/JOB y/YEARS_OF_EXPERIENCE c/COMPANY</code></p>
 </div>
@@ -173,14 +171,45 @@ Supported tags: <code>n/</code>, <code>p/</code>, <code>e/</code>, <code>a/</cod
 </div>
 </div>
 <div class="sect3">
-<h4 id="adds-a-job-offer-to-the-recruitbook"><a class="link" href="#adds-a-job-offer-to-the-recruitbook">3.2.2. Adds a job offer to the RecruitBook</a></h4>
+<h4 id="adds-a-company-to-the-recruitbook"><a class="link" href="#adds-a-company-to-the-recruitbook">3.2.2. Adds a company to the RecruitBook</a></h4>
+<div class="paragraph">
+<p>Format: <code>addC c/UNIQUE_COMPANY_NAME a/ADDRESS e/EMAIL p/PHONE</code><br></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>addC c/KFC a/101, Clementi Ave 2, #01-01 e/kfc@gmail.com p/61231232</code></p>
+</li>
+<li>
+<p><code>addC c/McDonalds a/101, Bukit Merah Lane 2, #01-01 e/macs@gmail.com p/61117111</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="adds-a-job-offer-to-the-recruitbook"><a class="link" href="#adds-a-job-offer-to-the-recruitbook">3.2.3. Adds a job offer to the RecruitBook</a></h4>
 <div class="paragraph">
 <p>Format: <code>addj</code></p>
 </div>
 <div class="paragraph">
-<p>Entering this command will prompt user the following:<br>
+<p>Entering this command will prompt you the following:<br>
 <strong><code>Enter the following details of the job in the format:</code></strong><br>
-<code>c/COMPANY j/JOB_TITLE</code></p>
+<code>c/COMPANY j/JOB_TITLE g/GENDER xr/AGE_RANGE h/EDUCATION s/SALARY</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+COMPANY specified has to be added to RecruitBook first!
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -188,43 +217,25 @@ Supported tags: <code>n/</code>, <code>p/</code>, <code>e/</code>, <code>a/</cod
 <div class="ulist">
 <ul>
 <li>
-<p><code>c/Mcdonalds j/Store Manager</code></p>
+<p><code>c/McDonalds j/Cashier g/M xr/20-30 h/O levels s/1200</code></p>
 </li>
 <li>
-<p><code>c/KFC j/Cashier</code></p>
+<p><code>c/KFC j/Cook g/F xr/20-30 h/O levels s/1400</code></p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>After keying in the details, user will be further prompted for details of job requirements:<br>
-<strong><code>Enter the job requirements in the format:</code></strong><br>
-<code>x/MIN_AGE-MAX_AGE h/HIGHEST_EDUCATION s/MIN_SALARY-MAX_SALARY g/GENDER</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>x/18-60 h/PRIMARY s/1000-1200 g/U</code></p>
-</li>
-<li>
-<p><code>x/18-30 h/O LEVEL s/1500-2000 g/M</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="exits-from-the-add-job-and-add-candidate-interface-without-adding-to-recruitbook"><a class="link" href="#exits-from-the-add-job-and-add-candidate-interface-without-adding-to-recruitbook">3.2.3. Exits from the add job and add candidate interface without adding to RecruitBook</a></h4>
-<div class="paragraph">
-<p>Format: <code>cancel</code></p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-code-list-code"><a class="link" href="#listing-all-code-list-code">3.3. Listing all : <code>list</code></a></h3>
+<h3 id="exits-from-any-intermediate-command"><a class="link" href="#exits-from-any-intermediate-command">3.3. Exits from any intermediate command</a></h3>
+<div class="paragraph">
+<p>Format: <code>cancel</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-code-list-code"><a class="link" href="#listing-all-code-list-code">3.4. Listing all : <code>list</code></a></h3>
 <div class="sect3">
-<h4 id="shows-a-list-of-all-candidates-interviewed-by-job-agent-br"><a class="link" href="#shows-a-list-of-all-candidates-interviewed-by-job-agent-br">3.3.1. Shows a list of all candidates interviewed by job agent<br></a></h4>
+<h4 id="shows-a-list-of-all-candidates-interviewed-by-job-agent-br"><a class="link" href="#shows-a-list-of-all-candidates-interviewed-by-job-agent-br">3.4.1. Shows a list of all candidates interviewed by job agent<br></a></h4>
 <div class="paragraph">
 <p>Format: <code>list candidates</code></p>
 </div>
@@ -246,7 +257,7 @@ Supported tags: <code>n/</code>, <code>p/</code>, <code>e/</code>, <code>a/</cod
 </div>
 </div>
 <div class="sect3">
-<h4 id="shows-a-list-of-all-job-offers-available-at-the-moment-br"><a class="link" href="#shows-a-list-of-all-job-offers-available-at-the-moment-br">3.3.2. Shows a list of all job offers available at the moment<br></a></h4>
+<h4 id="shows-a-list-of-all-job-offers-available-at-the-moment-br"><a class="link" href="#shows-a-list-of-all-job-offers-available-at-the-moment-br">3.4.2. Shows a list of all job offers available at the moment<br></a></h4>
 <div class="paragraph">
 <p>Format: <code>list jobs</code></p>
 </div>
@@ -269,9 +280,9 @@ Supported tags: <code>n/</code>, <code>p/</code>, <code>e/</code>, <code>a/</cod
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-candidate-job-code-editc-code"><a class="link" href="#editing-a-candidate-job-code-editc-code">3.4. Editing a candidate / job : <code>editc</code></a></h3>
+<h3 id="editing-a-candidate-job-code-editc-code"><a class="link" href="#editing-a-candidate-job-code-editc-code">3.5. Editing a candidate / job : <code>editc</code></a></h3>
 <div class="sect3">
-<h4 id="edits-attributes-of-the-candidate-at-the-specified-index-code-index-code"><a class="link" href="#edits-attributes-of-the-candidate-at-the-specified-index-code-index-code">3.4.1. Edits attributes of the candidate at the specified index <code>&lt;INDEX&gt;</code></a></h4>
+<h4 id="edits-attributes-of-the-candidate-at-the-specified-index-code-index-code"><a class="link" href="#edits-attributes-of-the-candidate-at-the-specified-index-code-index-code">3.5.1. Edits attributes of the candidate at the specified index <code>&lt;INDEX&gt;</code></a></h4>
 <div class="paragraph">
 <p>Format: <code>editc &lt;INDEX&gt;</code></p>
 </div>
@@ -296,7 +307,7 @@ The index must be an index number shown in the displayed candidates list.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="edits-details-of-a-job-offer"><a class="link" href="#edits-details-of-a-job-offer">3.4.2. Edits details of a job offer</a></h4>
+<h4 id="edits-details-of-a-job-offer"><a class="link" href="#edits-details-of-a-job-offer">3.5.2. Edits details of a job offer</a></h4>
 <div class="paragraph">
 <p>Format: <code>editj &lt;INDEX&gt;</code></p>
 </div>
@@ -318,7 +329,7 @@ The index must be an index number shown in the displayed job list.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-candidates-by-search-parameter-code-find-code"><a class="link" href="#locating-candidates-by-search-parameter-code-find-code">3.5. Locating candidates by search parameter : <code>find</code></a></h3>
+<h3 id="locating-candidates-by-search-parameter-code-find-code"><a class="link" href="#locating-candidates-by-search-parameter-code-find-code">3.6. Locating candidates by search parameter : <code>find</code></a></h3>
 <div class="paragraph">
 <p>Finds names of candidates from RecruitBook with a given search parameter.<br>
 Format: <code>find &lt;tag&gt;/KEYWORD</code><br>
@@ -365,9 +376,9 @@ Supported tags: <code>n/NAME</code>, <code>p/PHONE</code>, <code>e/EMAIL</code>,
 </div>
 </div>
 <div class="sect2">
-<h3 id="filtering-by-a-specific-tag-code-filter-code"><a class="link" href="#filtering-by-a-specific-tag-code-filter-code">3.6. Filtering by a specific tag : <code>filter</code></a></h3>
+<h3 id="filtering-by-a-specific-tag-code-filter-code"><a class="link" href="#filtering-by-a-specific-tag-code-filter-code">3.7. Filtering by a specific tag : <code>filter</code></a></h3>
 <div class="sect3">
-<h4 id="filters-and-lists-out-the-names-of-the-people-that-falls-within-the-category-of-the-searched-field"><a class="link" href="#filters-and-lists-out-the-names-of-the-people-that-falls-within-the-category-of-the-searched-field">3.6.1. Filters and lists out the names of the people that falls within the category of the searched field</a></h4>
+<h4 id="filters-and-lists-out-the-names-of-the-people-that-falls-within-the-category-of-the-searched-field"><a class="link" href="#filters-and-lists-out-the-names-of-the-people-that-falls-within-the-category-of-the-searched-field">3.7.1. Filters and lists out the names of the people that falls within the category of the searched field</a></h4>
 <div class="paragraph">
 <p>Format: <code>filter &lt;tag&gt;/KEYWORD</code><br>
 Supported tags: <code>h/</code>, <code>j/</code>, <code>s/</code>, <code>x/</code></p>
@@ -400,16 +411,16 @@ Supported tags: <code>h/</code>, <code>j/</code>, <code>s/</code>, <code>x/</cod
 </div>
 </div>
 <div class="sect3">
-<h4 id="exits-from-the-filter-interface-and-system-proceeds-to-ask-for-next-command"><a class="link" href="#exits-from-the-filter-interface-and-system-proceeds-to-ask-for-next-command">3.6.2. Exits from the filter interface and system proceeds to ask for next command</a></h4>
+<h4 id="exits-from-the-filter-interface-and-system-proceeds-to-ask-for-next-command"><a class="link" href="#exits-from-the-filter-interface-and-system-proceeds-to-ask-for-next-command">3.7.2. Exits from the filter interface and system proceeds to ask for next command</a></h4>
 <div class="paragraph">
 <p>Format: <code>cancel</code></p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-candidate-job-code-delete-code"><a class="link" href="#deleting-a-candidate-job-code-delete-code">3.7. Deleting a candidate / job : <code>delete</code></a></h3>
+<h3 id="deleting-a-candidate-job-code-delete-code"><a class="link" href="#deleting-a-candidate-job-code-delete-code">3.8. Deleting a candidate / job : <code>delete</code></a></h3>
 <div class="sect3">
-<h4 id="deleting-a-specific-candidate"><a class="link" href="#deleting-a-specific-candidate">3.7.1. Deleting a specific candidate</a></h4>
+<h4 id="deleting-a-specific-candidate"><a class="link" href="#deleting-a-specific-candidate">3.8.1. Deleting a specific candidate</a></h4>
 <div class="paragraph">
 <p>Format: <code>deletec &lt;INDEX&gt;</code></p>
 </div>
@@ -439,7 +450,7 @@ Supported tags: <code>h/</code>, <code>j/</code>, <code>s/</code>, <code>x/</cod
 </div>
 </div>
 <div class="sect3">
-<h4 id="deleting-a-specific-job-offer"><a class="link" href="#deleting-a-specific-job-offer">3.7.2. Deleting a specific job offer</a></h4>
+<h4 id="deleting-a-specific-job-offer"><a class="link" href="#deleting-a-specific-job-offer">3.8.2. Deleting a specific job offer</a></h4>
 <div class="paragraph">
 <p>Format: <code>deletej &lt;INDEX&gt;</code></p>
 </div>
@@ -467,28 +478,28 @@ Supported tags: <code>h/</code>, <code>j/</code>, <code>s/</code>, <code>x/</cod
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.8. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.9. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the RecruitBook.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.9. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.10. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.10. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.11. Saving the data</a></h3>
 <div class="paragraph">
 <p>RecruitBook data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.11. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.12. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -544,4 +555,4 @@ e.g. <code>deletec 1 `, `deletej 5</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-08 15:43:40 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-09 13:11:13 UTC</div></div></div></body></html>
